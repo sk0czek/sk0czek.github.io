@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zaliczenie</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+    <button type="button">
+        <a href="/index.html">Powrót do strony głownej</a>
+    </button>
+        <pre>
+        #include&ltiostream&gt
+        #include&ltmath.h&gt
+            
+        using namespace std;
+            
+        int main() {
+                
+            float A_sko, B_sko, C_sko, p_sko, S_sko, r_sko, R_sko;
+            
+            cout << "Podaj pierwszy bok trojkata: "; cin >> A_sko; cout << endl;
+            cout << "Podaj drugi bok trojkata: "; cin >> B_sko; cout << endl;
+            cout << "Podaj trzeci bok trojkata: "; cin >> C_sko; cout << endl;
+                
+            if(A_sko>0 && B_sko>0 && C_sko>0 && (A_sko+B_sko > C_sko) && (A_sko+C_sko > B_sko) && (B_sko+C_sko > A_sko)){
+                p_sko=(A_sko+B_sko+C_sko)/2.0;
+                S_sko=sqrt(p_sko*(p_sko-A_sko)*(p_sko-B_sko)*(p_sko-C_sko));
+                r_sko=S_sko/p_sko;
+                R_sko=(A_sko*B_sko*C_sko)/(4.0*S_sko);
+        
+                cout << "Pole tego trojkata S wynosi: " << S_sko << " cm^2" << endl;
+                cout << "Promien kola opisanego R wynosi: " << R_sko << " cm" << endl;
+                cout << "Promien kola wpisanego r wynosi: " << r_sko << " cm" << endl;
+            
+            }
+            else {
+                cout << "Podane boki nie tworzą trójkąta lub mają niepoprawne długości" << endl;
+            }
+            
+        return 0;
+        }
+        </pre>
+</body>
+</html>

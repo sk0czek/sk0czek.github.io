@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zaliczenie</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+    <button type="button">
+        <a href="/index.html">Powrót do strony głownej</a>
+    </button>
+        <pre>
+        #include&ltiostream&gt
+
+            using namespace std;
+            
+            int main() {
+                int numer_miesiaca_urodzenia, koniec_zakresu;
+            
+                cout << "Podaj numer miesiaca urodzenia: ";
+                cin >> numer_miesiaca_urodzenia;
+            
+                if (numer_miesiaca_urodzenia % 2 != 0) {
+                    numer_miesiaca_urodzenia++; // Jeśli podano nieparzysty numer, zwiększamy go o 1, aby rozpocząć od liczby parzystej.
+                }
+            
+                koniec_zakresu = numer_miesiaca_urodzenia + 30;
+            
+                cout << "Liczby parzyste z zakresu " << numer_miesiaca_urodzenia << " do " << koniec_zakresu << endl;
+                
+                for (int i = numer_miesiaca_urodzenia; i <= koniec_zakresu; i += 2) {
+                   cout << i << " ";
+                }
+            
+                return 0;
+            }
+            
+        </pre>
+</body>
+</html>

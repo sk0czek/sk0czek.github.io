@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zaliczenie</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+    <button type="button">
+        <a href="/index.html">Powrót do strony głownej</a>
+    </button>
+    <pre>
+    #include&ltiostream&gt
+
+        using namespace std;
+        
+        int nwd(int n, int m){
+            int r;
+            while(m!=0){
+                r=(n%m);
+                n=m;
+                m=r;
+            }
+            return n;
+        }
+        
+        int main() {
+            int m, n;
+        
+            cout << "Podaj pierwsza liczbe: "; cin >> m; cout << endl;
+            cout << "Podaj druga liczbe: "; cin >> n; cout << endl;
+        
+            int NWD = nwd(m, n);
+        
+            cout << "Szukanym dzielnikiem jest: " << nwd(m, n) << endl;
+        
+            return 0;
+        }
+        
+    </pre>
+</body>
+</html>

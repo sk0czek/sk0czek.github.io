@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zaliczenie</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+    <button type="button">
+        <a href="/index.html">Powrót do strony głownej</a>
+    </button>
+    <pre>
+    #include&ltiostream&gt
+    #include&ltiomanip&gt 
+        
+        using namespace std;
+        
+        int main(){
+        
+            float waga_jablek, waga_gruszek, wartosc_jablek, wartosc_gruszek,cena_jablek, cena_gruszek;
+        
+            cout << "Podaj wage jablek w gramach:" << endl;
+            cin >> waga_jablek;
+            cout << "Podaj wage gruszek w tonach:" << endl;
+            cin >> waga_gruszek;
+            cout << "Podaj cene jablek w kilogramach:" << endl;
+            cin >> cena_jablek;
+            cout << "Podaj cene gruszek w kilogramach:" << endl;
+            cin >> cena_gruszek;
+        
+            waga_jablek = waga_jablek/1000;
+            waga_gruszek = waga_gruszek*1000;
+        
+            wartosc_jablek = waga_jablek * cena_jablek;
+            wartosc_gruszek = waga_gruszek * cena_gruszek;
+        
+            float suma=wartosc_gruszek+wartosc_jablek;
+            
+            cout << fixed << setprecision(2);
+            cout << "wartosc jablek  = \t " << waga_jablek << " kg *" << cena_jablek << " zl \t = \t " << wartosc_jablek << " zl" << endl;
+            cout << "wartosc gruszek = \t " << waga_gruszek << " kg *" << cena_gruszek << " zl \t = \t " << wartosc_gruszek << " zl" << endl;
+            cout << "\t \t \t \t  suma \t \t = \t " << suma << " zl"  << endl;
+
+            return 0;
+        }
+        
+    </pre>
+</body>
+</html>
